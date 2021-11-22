@@ -1,13 +1,183 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "~materialize-css/dist/css/materialize.min.css";
+
+input.white-input {
+  border-bottom: 1px solid #fff !important;
+  box-shadow: 0 1px 0 0 #fff !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input.white-input + label {
+  color: #fff !important;
+}
+
+input.white-input:focus {
+  border-bottom: 1px solid #fff !important;
+  box-shadow: 0 1px 0 0 #fff !important;
+}
+
+input.white-input:focus + label {
+  color: #fff !important;
+}
+
+.waves-effect.waves-ml .waves-ripple {
+  background-color: rgba(255, 0, 157, 0.4);
+}
+
+.switch label input[type="checkbox"]:checked + .lever {
+  background-color: rgba(253, 77, 186, 0.4);
+}
+
+.switch label input[type="checkbox"]:checked + .lever:after {
+  background-color: rgba(255, 0, 157);
+}
+
+.media-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+@media (max-width: 600px) {
+  .media-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .media-flex > * {
+    margin: 10px;
+  }
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+@media (max-width: 700px) {
+  .flex-space-between {
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-space-between > * {
+    margin: 10px;
+  }
+}
+
+.score-card {
+  border: 1px solid grey;
+  padding: 10px 25%;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px){
+  .score-card{
+    padding: 10px 10%;
+  }
+}
+
+/* Progress bar */
+
+input[type="range"] {
+  --bar-bg: #f8bbd0;
+  --seek-before-width: 0;
+  --seek-before-color: #ec407a;
+  --knobby: #3452a5;
+  --selectedKnobby: #26c9c3;
+
+  appearance: none;
+  background: var(--bar-bg);
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 11px;
+  outline: none;
+  margin: 0 10px;
+  border: none;
+  overflow: hidden;
+}
+
+/* progress bar - safari */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--bar-bg);
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 11px;
+  outline: none;
+}
+
+/* progress bar - firefox */
+input[type="range"]::-moz-range-track {
+  background: var(--bar-bg);
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 11px;
+  outline: none;
+}
+
+input[type="range"]::-moz-focus-outer {
+  border: 0;
+}
+
+/* progress bar - chrome and safari */
+input[type="range"]::before {
+  content: "";
+  height: 11px;
+  width: var(--seek-before-width);
+  background-color: var(--seek-before-color);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* progress bar - firefox */
+input[type="range"]::-moz-range-progress {
+  background-color: var(--seek-before-color);
+  /* border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; */
+  height: 11px;
+}
+
+/* knobby - chrome and safari */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 0;
+  width: 0;
+  /* border-radius: 0; */
+  /* border: none;
+  background-color: var(--knobby);
+  cursor: pointer;
+  position: relative;
+  margin: -2px 0 0 0;
+  z-index: 3;
+  box-sizing: border-box; */
+}
+
+/* knobby while dragging - chrome and safari */
+input[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+  background: var(--selectedKnobby);
+}
+
+/* knobby - firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 0;
+  width: 0;
+  /* border-radius: 50%;
+  border: transparent;
+  background-color: var(--knobby);
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box; */
+}
+
+/* knobby while dragging - firefox */
+input[type="range"]:active::-moz-range-thumb {
+  transform: scale(1.2);
+  background: var(--selectedKnobby);
 }
