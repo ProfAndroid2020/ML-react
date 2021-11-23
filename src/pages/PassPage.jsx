@@ -2,9 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { PassContext } from "../context/passContext";
 import { useMessage } from "../hooks/message.hook";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { DBContext } from "../context/DBContext";
 
 
 export const Pass = () => {
+  const db = useContext(DBContext);
   const pass = useContext(PassContext);
   const message = useMessage();
   const [password, setPassword] = useState("");
@@ -31,6 +33,7 @@ export const Pass = () => {
         // const user = userCredential.user;
         // console.log(user);
         pass.login("simple");
+
       })
       .catch((error) => {
         // const errorCode = error.code;
