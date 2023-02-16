@@ -3,6 +3,7 @@ import { PassContext } from "../context/passContext";
 import { useMessage } from "../hooks/message.hook";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
+// Comment just for git
 
 export const Pass = () => {
   const pass = useContext(PassContext);
