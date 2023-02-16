@@ -1,3 +1,4 @@
+import { Pause, PlayArrow } from "@material-ui/icons";
 import React, { useRef, useState } from "react";
 
 export default function MyAudio({ audioURL }) {
@@ -83,9 +84,9 @@ export default function MyAudio({ audioURL }) {
           style={{ marginRight: "10px", overflow: "visible" }}
         >
           {!isPlay ? (
-            <i className="material-icons prefix">play_arrow</i>
+            <i className="material-icons prefix"><PlayArrow /></i>
           ) : (
-            <i className="material-icons prefix">pause</i>
+            <i className="material-icons prefix"><Pause /></i>
           )}
         </button>
         <span>{!isNaN(currentTime) ? calcTime(currentTime) : "00:00"}</span>

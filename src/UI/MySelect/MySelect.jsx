@@ -1,3 +1,4 @@
+import { ArrowDropDown } from "@material-ui/icons";
 import React, { useState, useEffect, useRef } from "react";
 import classes from "./MySelect.module.css";
 
@@ -41,7 +42,7 @@ export default function MySelect({ firstOpt, options, onChange }) {
             active && classes["active-icon"]
           }`}
         >
-          arrow_drop_down
+          <ArrowDropDown />
         </i>
       </div>
 

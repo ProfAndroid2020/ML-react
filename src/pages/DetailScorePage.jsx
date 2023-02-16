@@ -25,6 +25,7 @@ import {
   update,
 } from "firebase/database";
 import EditClasses from "../components/EditClasses";
+import { Delete, Edit, FolderOpen } from "@material-ui/icons";
 
 export const Detail = () => {
   const history = useHistory();
@@ -321,7 +322,7 @@ export const Detail = () => {
               paddingLeft: "10px",
             }}
           >
-            folder_open
+            <FolderOpen />
           </i>
         </a>
         <i
@@ -332,7 +333,7 @@ export const Detail = () => {
           }}
           onClick={deleteScore}
         >
-          delete
+          <Delete />
         </i>
       </h4>
 
@@ -369,7 +370,7 @@ export const Detail = () => {
                 className={`small material-icons pink-text text-darken-1 `}
                 style={{ marginLeft: "10px", cursor: "pointer" }}
               >
-                mode_edit
+                <Edit />
               </i>
             </a>
           </div>

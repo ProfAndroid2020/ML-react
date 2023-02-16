@@ -1,3 +1,4 @@
+import { Close } from "@material-ui/icons";
 import React from "react";
 
 const style = {
@@ -30,7 +31,7 @@ function MyFooter({ children, closeHandler }) {
           style={{ cursor: "pointer", position: 'absolute', right: '5px', top: '5px' }}
           onClick={()=>closeHandler(false)}
         >
-          close
+          <Close />
         </i>
         {children}
       </div>

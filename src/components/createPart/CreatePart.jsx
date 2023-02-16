@@ -1,3 +1,4 @@
+import { AddCircleOutline, CloudUpload, PlayArrow } from "@material-ui/icons";
 import React from "react";
 import close from '../../icons/close.png'
 
@@ -103,7 +104,7 @@ export default function CreatePart({
             className={`small material-icons pink-text text-darken-1 `}
             style={{ cursor: "pointer" }}
           >
-            add_circle_outline
+            <AddCircleOutline />
           </i>
         </label>
         <h5>{namePart}</h5>
@@ -135,7 +136,7 @@ export default function CreatePart({
                     className={`small material-icons pink-text text-darken-1 `}
                     style={{ cursor: "pointer" }}
                   >
-                    cloud_upload
+                    <CloudUpload />
                   </i>
                 </label>
               </div>
@@ -145,7 +146,7 @@ export default function CreatePart({
                   style={{ cursor: "pointer" }}
                   num={el.num}
                 >
-                  play_arrow
+                  <PlayArrow />
                 </i>
               </label>
 

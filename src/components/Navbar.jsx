@@ -1,3 +1,4 @@
+import { Menu } from "@material-ui/icons";
 import React, { useEffect, useContext } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { PassContext } from "../context/passContext";
@@ -31,7 +32,7 @@ export const Navbar = ({ user }) => {
             Musica Linguae
           </span>
           <a href="/" data-target="mobile-demo" className="sidenav-trigger">
-            <i className="material-icons">menu</i>
+            <i className="material-icons"><Menu /></i>
           </a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             {user === "admin" && (

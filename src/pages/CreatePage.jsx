@@ -15,6 +15,7 @@ import {
 } from "firebase/storage";
 import Swal from "sweetalert2";
 import EditClasses from "../components/EditClasses";
+import { Edit } from "@material-ui/icons";
 
 export default function CreatePage() {
   const db = useContext(DBContext);
@@ -177,7 +178,7 @@ export default function CreatePage() {
                 className={`small material-icons pink-text text-darken-1 `}
                 style={{ marginLeft: "10px", cursor: "pointer" }}
               >
-                mode_edit
+                <Edit />
               </i>
             </a>
           </div>

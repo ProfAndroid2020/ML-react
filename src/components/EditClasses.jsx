@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { DBContext } from "../context/DBContext";
 import { push, ref, remove, set } from "firebase/database";
+import { AddCircleOutline, Delete } from "@material-ui/icons";
 
 export default function EditClasses() {
   const db = useContext(DBContext);
@@ -67,7 +68,7 @@ export default function EditClasses() {
                   className="material-icons pink-text text-darken-1"
                   onClick={addClassHandler}
                 >
-                  add_circle_outline
+                  <AddCircleOutline />
                 </i>
               </a>
             </div>
@@ -83,7 +84,7 @@ export default function EditClasses() {
                     mykey={el.key}
                     onClick={deleteClassHandler}
                   >
-                    delete
+                    <Delete />
                   </i>
                 </a>
               </div>
