@@ -156,7 +156,7 @@ export default function CreatePart({
                     el.num > 1 ||
                     (el.num === 1 && (el.name || el.audioFileName))
                       ? { cursor: "pointer", width: '20px', height: '20px' }
-                      : { visibility: "hidden" }
+                      : { visibility: "hidden", width: '20px', height: '20px' }
                   }
                   num={el.num}
                 />
