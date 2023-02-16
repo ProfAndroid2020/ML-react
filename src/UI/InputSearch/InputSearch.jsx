@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function InputSearch(props) {
+  // some changes
   return (
     <div className="input-field" required>
       <i className="material-icons prefix">search</i>
