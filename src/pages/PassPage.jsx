@@ -32,7 +32,6 @@ export const Pass = () => {
         // const user = userCredential.user;
         // console.log(user);
         pass.login("simple");
-
       })
       .catch(() => {
         // const errorCode = error.code;

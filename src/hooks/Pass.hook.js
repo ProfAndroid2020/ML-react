@@ -9,11 +9,9 @@ function getCookie(name) {
 
 export const usePass = () => {
   const [user, setUser] = useState('');
-  const [loading, setLoading] = useState(false);
 
   const login = useCallback((_user) => {
     setUser(_user);
-    setLoading(true);
     let date = new Date(Date.now() + 86400e3);
     date = date.toUTCString();
     document.cookie = `user=${_user}; max-age=${date}`;
@@ -32,5 +30,5 @@ export const usePass = () => {
     }
   }, [login]);
 
-  return { login, logout, user, loading, setLoading };
+  return { login, logout, user };
 };
