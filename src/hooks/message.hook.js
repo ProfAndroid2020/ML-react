@@ -1,4 +1,4 @@
-import { useCallback } from "react"
+import {useCallback} from "react"
 
 
 export const useMessage = () => {
@@ -6,5 +6,5 @@ export const useMessage = () => {
         if (window.M && text) {
             window.M.toast({html: text})
         }
-}, [])
+    }, [])
 }

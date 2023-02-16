@@ -67,6 +67,7 @@ function App() {
         setNotes(nts);
         setLoading(false);
       });
+    console.log("start use effect")
   }, [user]);
 
   return (

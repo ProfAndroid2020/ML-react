@@ -2,11 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { PassContext } from "../context/passContext";
 import { useMessage } from "../hooks/message.hook";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { DBContext } from "../context/DBContext";
 
 
 export const Pass = () => {
-  const db = useContext(DBContext);
   const pass = useContext(PassContext);
   const message = useMessage();
   const [password, setPassword] = useState("");
@@ -28,14 +26,14 @@ export const Pass = () => {
         // setPassword("");
         // window.M.updateTextFields();
       })
-      .then((userCredential) => {
+      .then(() => {
         // Signed in
         // const user = userCredential.user;
         // console.log(user);
         pass.login("simple");
 
       })
-      .catch((error) => {
+      .catch(() => {
         // const errorCode = error.code;
         // const errorMessage = error.message;
         // console.log(errorCode);
@@ -51,7 +49,7 @@ export const Pass = () => {
 
   return (
     <div className="row">
-      <div className="col s6 offset-s3">
+      <div className="col xl6 s12 offset-xl3">
         <h3
           style={{ textAlign: "center" }}
           onClick={() => console.log(pass.user)}
