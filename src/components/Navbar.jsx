@@ -88,7 +88,7 @@ export const Navbar = ({ user }) => {
                 Администрация
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink
                 to="/changePassword"
                 className="waves-effect waves-light"
@@ -96,7 +96,7 @@ export const Navbar = ({ user }) => {
               >
                 Сменить пароль
               </NavLink>
-            </li>
+            </li> */}
           </>
         )}
 
